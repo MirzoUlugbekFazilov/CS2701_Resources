@@ -1,0 +1,813 @@
+/* ------------------------------------------------------------------ *
+ * Primitives: typography, buttons, cards, inputs, meters, tables.
+ * Sizes mirror the Figma frames (Inter, leading: normal).
+ * ------------------------------------------------------------------ */
+
+/* Logo ------------------------------------------------------------- */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--text);
+}
+
+.logo__mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--green);
+  color: var(--lime);
+  flex: none;
+}
+
+.logo__word {
+  font-weight: 600;
+  font-size: 23px;
+  line-height: normal;
+}
+
+.logo--md .logo__mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+}
+
+.logo--md .logo__word {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo--light {
+  color: #fff;
+}
+
+.logo--light .logo__mark {
+  background: var(--lime);
+  color: var(--green-dark);
+}
+
+/* Text ------------------------------------------------------------- */
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.eyebrow--xs {
+  font-size: 10px;
+  margin-bottom: 0;
+}
+
+.eyebrow--green {
+  color: var(--green);
+  font-size: 11px;
+}
+
+.eyebrow--on-dark {
+  color: var(--on-dark);
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--text);
+  margin-bottom: 9px;
+}
+
+.page-title--lg {
+  font-size: 36px;
+}
+
+.page-sub {
+  font-size: 14px;
+  line-height: normal;
+  color: var(--muted);
+}
+
+.footnote {
+  font-size: 10px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 15px;
+}
+
+.footnote--inline {
+  margin-top: 0;
+}
+
+.flash {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  border-radius: var(--r-md);
+  background: var(--tint);
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Buttons ---------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 42px;
+  padding: 0 20px;
+  border-radius: var(--r-md);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn--primary {
+  background: var(--green);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #22583f;
+}
+
+.btn--dark {
+  background: var(--green-dark);
+  color: #fff;
+}
+
+.btn--dark:hover {
+  background: #102b24;
+}
+
+.btn--ghost {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.btn--ghost:hover {
+  border-color: #c9d4c8;
+  background: #fbfcfa;
+}
+
+.btn--white {
+  background: #fff;
+  color: var(--text);
+}
+
+.btn--sm {
+  height: 34px;
+  padding: 0 16px;
+  font-size: 12px;
+}
+
+.btn--lg {
+  height: 48px;
+  padding: 0 26px;
+  font-size: 15px;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.link-btn {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--green);
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+.link-btn--remove {
+  color: var(--remove);
+  font-weight: 400;
+}
+
+.link-btn--danger {
+  color: var(--danger);
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 18px;
+  display: inline-block;
+}
+
+.link-arrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  margin-top: 14px;
+}
+
+.link-arrow:hover {
+  text-decoration: underline;
+}
+
+/* Chips and badges ------------------------------------------------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 14px;
+  border-radius: var(--r-sm);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.chip--quiet {
+  background: var(--bg);
+  color: var(--muted);
+}
+
+.chip--tint {
+  height: 25px;
+  padding: 0 9px;
+  border-radius: 5px;
+  background: var(--tint);
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--green-dark);
+  color: var(--lime);
+  font-weight: 700;
+  flex: none;
+}
+
+.avatar--sm {
+  width: 36px;
+  height: 36px;
+  font-size: 13px;
+}
+
+.avatar--lg {
+  width: 96px;
+  height: 96px;
+  font-size: 30px;
+}
+
+/* Cards ------------------------------------------------------------ */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.card--pad {
+  padding: 22px;
+}
+
+.card--green {
+  background: var(--green);
+  color: #fff;
+}
+
+.card--tint {
+  background: var(--tint-panel);
+}
+
+.card--amber {
+  background: var(--amber-bg-soft);
+}
+
+.card--table {
+  padding: 0;
+}
+
+.card__title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: normal;
+  color: var(--text);
+}
+
+.card__title--lg {
+  font-size: 18px;
+}
+
+.card__title--sm {
+  font-size: 14px;
+}
+
+.card__sub {
+  font-size: 12px;
+  line-height: normal;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.card__sub--amber {
+  color: var(--amber);
+  font-size: 13px;
+}
+
+.card__sub--green {
+  color: var(--green);
+  font-size: 13px;
+}
+
+.card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card__head--pad {
+  padding: 12px 22px;
+  align-items: center;
+}
+
+.card__head-left {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.card__count {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.card__note {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 16px;
+}
+
+.card__note--green {
+  color: var(--green);
+  font-weight: 500;
+}
+
+/* Meters and bars -------------------------------------------------- */
+
+.meter {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--track);
+  overflow: hidden;
+}
+
+.meter__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+  transition: width 0.25s ease;
+}
+
+.meter--sm {
+  height: 6px;
+}
+
+.meter--wide {
+  height: 8px;
+  width: 100%;
+}
+
+.meter--on-dark {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--dark-track);
+}
+
+.meter--on-dark .meter__fill {
+  background: var(--lime);
+}
+
+.bar {
+  height: 16px;
+  border-radius: 4px;
+  background: var(--bar-track);
+  overflow: hidden;
+}
+
+.bar__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--green);
+  transition: width 0.25s ease;
+}
+
+.bar__fill--soft {
+  background: var(--bar-fill);
+}
+
+/* Forms ------------------------------------------------------------ */
+
+.form,
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-form--tight {
+  gap: 14px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.field__label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--text);
+  margin-bottom: 9px;
+}
+
+.field__label-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.field__aside-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 9px;
+}
+
+.field__hint,
+.field__error {
+  font-size: 11px;
+  line-height: normal;
+  margin-top: 8px;
+}
+
+.field__hint {
+  color: var(--muted);
+}
+
+.field__error {
+  color: var(--danger);
+}
+
+.field__formula {
+  font-size: 11px;
+  color: var(--muted);
+  align-self: center;
+  padding-top: 18px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.input {
+  width: 100%;
+  height: 48px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+  font-size: 13px;
+  color: var(--text);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input::placeholder {
+  color: var(--muted-soft);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgb(40 103 78 / 0.12);
+}
+
+.input--lg {
+  height: 50px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.input.has-error {
+  border-color: var(--danger);
+}
+
+.input.has-error:focus {
+  box-shadow: 0 0 0 3px rgb(200 85 61 / 0.14);
+}
+
+select.input {
+  appearance: none;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+/* The design has no spinner arrows on number fields. */
+.input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.input[type='number']::-webkit-outer-spin-button,
+.input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -6px;
+  border-right: 1.7px solid var(--muted);
+  border-bottom: 1.7px solid var(--muted);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.input-affix {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-affix .input {
+  padding-right: 62px;
+}
+
+.input-affix__unit {
+  position: absolute;
+  right: 14px;
+  font-size: 12px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.input-affix__chip {
+  position: absolute;
+  right: 8px;
+  pointer-events: none;
+}
+
+.input-affix__action {
+  position: absolute;
+  right: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkbox__box {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #c3cdc2;
+  border-radius: 4px;
+  background: var(--surface);
+  flex: none;
+  position: relative;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.checkbox input:checked + .checkbox__box {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.checkbox input:checked + .checkbox__box::after {
+  content: '';
+  position: absolute;
+  left: 4.5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.checkbox input:focus-visible + .checkbox__box {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* Toggle ----------------------------------------------------------- */
+
+.toggle {
+  width: 40px;
+  height: 22px;
+  border-radius: var(--r-pill);
+  background: #d6ddd4;
+  padding: 3px;
+  display: flex;
+  transition: background-color 0.18s ease;
+  flex: none;
+}
+
+.toggle.is-on {
+  background: var(--green);
+}
+
+.toggle__knob {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.18s ease;
+}
+
+.toggle.is-on .toggle__knob {
+  transform: translateX(18px);
+}
+
+/* Tables ----------------------------------------------------------- */
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.table {
+  min-width: 640px;
+}
+
+.table thead th {
+  background: var(--surface-sunken);
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: left;
+  padding: 11px 0;
+  white-space: nowrap;
+}
+
+.table thead th:first-child {
+  padding-left: 22px;
+}
+
+.table thead th:last-child {
+  padding-right: 22px;
+}
+
+.table tbody td {
+  font-size: 11px;
+  color: var(--text);
+  padding: 6px 12px 6px 0;
+  white-space: nowrap;
+}
+
+.table tbody tr:first-child td {
+  padding-top: 14px;
+}
+
+.table tbody td:first-child {
+  padding-left: 22px;
+}
+
+.table tbody td:last-child {
+  padding-right: 22px;
+}
+
+.table__name {
+  font-weight: 500;
+}
+
+.table__muted {
+  color: var(--muted);
+}
+
+.table__status {
+  color: var(--green);
+  font-size: 10px;
+}
+
+.table__empty {
+  color: var(--muted);
+  padding: 24px 22px !important;
+  white-space: normal;
+}
+
+.table--plain thead th {
+  background: transparent;
+  padding-top: 0;
+}
+
+.table--plain thead th:first-child,
+.table--plain tbody td:first-child {
+  padding-left: 0;
+}
+
+.table--plain thead th:last-child,
+.table--plain tbody td:last-child {
+  padding-right: 0;
+}
+
+.table--plain tbody td {
+  font-size: 12px;
+  padding: 8px 12px 8px 0;
+}
+
+/* Priority colour coding, as in the design: essential devices read green,
+   lower-priority ones amber. Scoped to table cells too, because the generic
+   `.table tbody td` colour rule would otherwise out-specify these. */
+.is-essential,
+.table tbody td.is-essential {
+  color: var(--green);
+}
+
+.is-optional,
+.table tbody td.is-optional {
+  color: var(--amber-tag);
+}
+
+/* Legend ----------------------------------------------------------- */
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+  min-width: 0;
+}
+
+.legend__row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.legend__swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 3px;
+  flex: none;
+}
+
+.legend__swatch--sq {
+  border-radius: 2px;
+}
+
+.legend__label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.legend__value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}

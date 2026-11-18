@@ -1,0 +1,130 @@
+/* ------------------------------------------------------------------ *
+ * Offline copy of the emergency plan (Plan-001-T2).
+ * Hidden on screen; "Download PDF" prints just this block, which the
+ * browser's print dialog can save as a PDF — no extra dependency.
+ * ------------------------------------------------------------------ */
+
+.print-plan {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin: 16mm;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .sidebar,
+  .topbar,
+  .tabbar,
+  .app__scrim,
+  .page-head,
+  .plan-summary,
+  .plan-grid,
+  .footnote {
+    display: none !important;
+  }
+
+  .app,
+  .app__main,
+  .workspace {
+    display: block;
+    padding: 0;
+    max-width: none;
+    height: auto;
+  }
+
+  .print-plan {
+    display: block;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .print-plan__head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #183d32;
+  }
+
+  .print-plan__head .icon {
+    color: #28674e;
+  }
+
+  .print-plan__brand {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #28674e;
+  }
+
+  .print-plan__venue {
+    font-size: 16pt;
+    font-weight: 700;
+    color: #183d32;
+  }
+
+  .print-plan__facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 16px 0 24px;
+  }
+
+  .print-plan__facts dt {
+    font-size: 8pt;
+    text-transform: uppercase;
+    color: #555;
+  }
+
+  .print-plan__facts dd {
+    margin: 4px 0 0;
+    font-size: 14pt;
+    font-weight: 700;
+    color: #183d32;
+  }
+
+  .print-plan h2 {
+    font-size: 12pt;
+    color: #183d32;
+    margin: 18px 0 8px;
+  }
+
+  .print-plan ol {
+    list-style: decimal;
+    padding-left: 18px;
+  }
+
+  .print-plan ol li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+
+  .print-plan table {
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  .print-plan th {
+    text-align: left;
+    font-size: 8pt;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding: 4px 0;
+  }
+
+  .print-plan td {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .print-plan__note {
+    margin-top: 20px;
+    font-size: 8pt;
+    color: #555;
+  }
+}

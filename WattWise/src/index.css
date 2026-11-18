@@ -1,0 +1,159 @@
+/* WattWise — design tokens taken directly from the Figma file
+   (3XNfhnxX16hWry56Q9cUJg · WattWise). */
+
+:root {
+  /* Surfaces */
+  --bg: #f6f7f3;
+  --surface: #ffffff;
+  --surface-sunken: #f4f6f0;
+  --field: #f5f7f1;
+  --field-alt: #f2f5ee;
+
+  /* Greens */
+  --green: #28674e;
+  --green-dark: #183d32;
+  --green-mid: #244c3f;
+  --green-deep: #315c49;
+  --lime: #dbef9c;
+  --tint: #eaf1e5;
+  --tint-step: #edf3e5;
+  --tint-panel: #eaf0e1;
+  --tint-pill: #e8f2c9;
+
+  /* Text */
+  --text: #183d32;
+  --muted: #66756e;
+  --muted-soft: #7d8982;
+  --on-dark: #d3e3d3;
+  --on-dark-soft: #c2d0c7;
+
+  /* Lines */
+  --line: #dfe5dd;
+  --line-strong: #e0e5dc;
+  --line-row: #edf0e9;
+  --line-dark: #58816a;
+  --line-panel: #cbd8c4;
+
+  /* Bars */
+  --track: #e1e7da;
+  --bar-track: #edf1e7;
+  --bar-fill: #9cb58b;
+  --dark-track: #527e61;
+
+  /* Amber / warning */
+  --amber-bg: #f8efda;
+  --amber-bg-soft: #faeed8;
+  --amber-bg-bar: #f9ecd6;
+  --amber: #876025;
+  --amber-head: #765220;
+  --amber-body: #7b6036;
+  --amber-tag: #886b31;
+  --amber-chip: #5c4410;
+
+  /* Status */
+  --danger: #c8553d;
+  --remove: #8b6658;
+
+  /* Chart */
+  --chart-1: #28674e;
+  --chart-2: #a0b779;
+  --chart-3: #e2be73;
+  --chart-4: #a1b67d;
+  --chart-5: #e6bd76;
+
+  /* Metrics */
+  --sidebar-w: 232px;
+  --topbar-h: 80px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-pill: 999px;
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+img,
+svg {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
