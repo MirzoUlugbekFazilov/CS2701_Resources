@@ -1,0 +1,316 @@
+/* ------------------------------------------------------------------ *
+ * Sign in / sign up — split layout, dark pitch panel on the left.
+ * ------------------------------------------------------------------ */
+
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.auth__aside {
+  position: relative;
+  overflow: hidden;
+  background: var(--green-dark);
+  color: #fff;
+  padding: 64px 80px 76px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth__pitch {
+  margin-top: auto;
+  margin-bottom: auto;
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+
+.auth__eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lime);
+  margin-bottom: 20px;
+}
+
+.auth__headline {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+}
+
+.auth__headline-accent {
+  color: var(--lime);
+  display: block;
+}
+
+.auth__intro {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--on-dark-soft);
+  margin-top: 28px;
+  max-width: 440px;
+}
+
+.auth__benefits {
+  margin-top: 54px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.auth__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+}
+
+.auth__check {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #2c5848;
+  color: var(--lime);
+  flex: none;
+}
+
+.auth__sdg {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  align-self: flex-start;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: var(--r-pill);
+  background: #214438;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--lime);
+}
+
+.auth__sdg-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lime);
+}
+
+/* The faint concentric rings in the lower-right of the design. */
+.auth__rings {
+  position: absolute;
+  right: -260px;
+  bottom: -300px;
+  width: 760px;
+  height: 760px;
+  border-radius: 50%;
+  border: 1px solid rgb(219 239 156 / 0.07);
+  box-shadow: inset 0 0 0 120px transparent, 0 0 0 1px rgb(219 239 156 / 0.05);
+}
+
+.auth__rings::before,
+.auth__rings::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgb(219 239 156 / 0.07);
+}
+
+.auth__rings::before {
+  inset: 110px;
+}
+
+.auth__rings::after {
+  inset: 220px;
+}
+
+/* Right panel ------------------------------------------------------ */
+
+.auth__panel {
+  background: var(--bg);
+  padding: 54px 80px 64px;
+  overflow-y: auto;
+}
+
+.auth__panel-inner {
+  max-width: 560px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.auth__back {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--green-mid);
+  margin-bottom: 28px;
+}
+
+.auth__back:hover {
+  text-decoration: underline;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 10px;
+  background: #ecefe8;
+  margin-bottom: 36px;
+}
+
+.auth-tabs__item {
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-md);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.auth-tabs__item.is-active {
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 700;
+}
+
+.auth__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--text);
+}
+
+.auth__sub {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 10px 0 28px;
+}
+
+.auth-form .field__label {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.auth-form .btn--lg {
+  height: 56px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.auth__foot {
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.auth__foot a {
+  font-weight: 700;
+  color: var(--green);
+}
+
+.auth__foot a:hover {
+  text-decoration: underline;
+}
+
+.auth__help {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 32px;
+  padding: 18px 20px;
+  border-radius: var(--r-lg);
+  background: #e3efc5;
+}
+
+.auth__help-mark {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--lime);
+  font-size: 13px;
+  font-weight: 700;
+  flex: none;
+}
+
+.auth__help-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.auth__help-text {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* Responsive ------------------------------------------------------- */
+
+@media (max-width: 1240px) {
+  .auth__aside,
+  .auth__panel {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .auth__headline {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 900px) {
+  .auth {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .auth__aside {
+    padding: 40px 28px 44px;
+  }
+
+  .auth__pitch {
+    margin: 36px 0 32px;
+  }
+
+  .auth__headline {
+    font-size: 32px;
+  }
+
+  .auth__intro {
+    font-size: 16px;
+    margin-top: 18px;
+  }
+
+  .auth__benefits {
+    margin-top: 32px;
+    gap: 16px;
+  }
+
+  .auth__benefits li {
+    font-size: 14px;
+  }
+
+  .auth__panel {
+    padding: 32px 28px 56px;
+  }
+
+  .auth__title {
+    font-size: 26px;
+  }
+
+  .auth__rings {
+    display: none;
+  }
+}
